@@ -1,23 +1,50 @@
-# BiasharaSmart — improved starter
+# BiasharaSmart — Business Management App
 
-## Frontend setup (Windows)
-1. Extract the ZIP.
+BiasharaSmart is a business management application built with React and Vite, with a Python FastAPI backend starter.
+
+## Frontend Setup (Windows)
+
+1. Extract the project ZIP.
 2. Open the `BiasharaSmart` folder in VS Code.
 3. Open Terminal → New Terminal.
 4. Run `npm install`.
 5. Run `npm run dev`.
 6. Open the local URL printed by Vite.
 
-## Improvements in this update
-- Search now filters records on Sales, Inventory, Expenses, Debts, and Reports.
-- English/Kiswahili switch is available in the top bar and its choice is saved locally.
-- Reports explain sales, expenses, estimated profit, inventory units, and outstanding debts; CSV export remains available.
-- Local display profile can save a name and email and displays the name in the top bar.
-- Added a separate `backend/` FastAPI starter with registration, password-hashed login, JWT bearer tokens, and protected profile endpoint.
+## Features
 
-## Important current limitations
-- The React app still stores business records in this browser and is **not connected to the FastAPI backend** yet.
+- Search and filter records on Sales, Inventory, Expenses, Debts, and Reports.
+- English and Kiswahili language switch, with the selection saved locally.
+- Reports explaining sales, expenses, estimated profit, inventory units, and outstanding debts.
+- CSV export for reports.
+- Local display profile that saves a name and email.
+- Separate Python FastAPI backend starter with registration, password-hashed login, JWT bearer tokens, and a protected profile endpoint.
+
+## Backend Setup
+
+1. Open a terminal in the `backend` folder.
+2. Create and activate a Python virtual environment.
+3. Install dependencies from `requirements.txt`.
+4. Follow `backend/README.md` to configure the environment and start the API.
+
+## Current Limitations
+
+- Business records are still stored in the browser and are not yet connected to the FastAPI backend.
 - The profile editor is a local display profile, not a real authenticated account.
-- Google OAuth is **not activated**. It requires Google Cloud OAuth credentials and server-side configuration; never put client secrets in the frontend.
-- Backend account data is stored in a local SQLite database by default. Follow `backend/README.md` before testing.
-- Before production, add user-owned business tables, connect the frontend API, migrations, email verification/password reset, rate limiting, backups, and security tests.
+- Google sign-in is not configured and requires Google OAuth credentials and server-side setup.
+- The backend uses a local SQLite database by default.
+
+## Before Production
+
+- Connect the React frontend to the backend API.
+- Add user-owned business records and enforce access controls.
+- Configure database migrations, email verification, password recovery, rate limiting, backups, and security tests.
+- Keep secret credentials out of GitHub.
+
+## Technologies
+
+- React
+- Vite
+- Python
+- FastAPI
+- SQLite
