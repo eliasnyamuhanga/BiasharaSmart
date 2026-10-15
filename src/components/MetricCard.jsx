@@ -1,0 +1,1 @@
+export default function MetricCard({title,value,detail,icon:Icon,tone="blue"}){return <article className="metric"><div className={`metric-icon ${tone}`}><Icon size={19}/></div><p>{title}</p><strong>{value}</strong><small>{detail}</small></article>}
